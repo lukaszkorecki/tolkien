@@ -1,0 +1,13 @@
+**/*.env
+**/.DS_Store
+**/.clj-kondo/
+**/.clj-kondo/.cache
+**/.clj-kondo/.cache/*
+**/.cpcache/
+**/.lsp/
+**/.nrepl-port
+**/clojure*edn
+**/hsperfdata_root/*
+**/target/
+**/tmp/
+**/scratch.clj

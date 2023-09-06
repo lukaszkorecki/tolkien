@@ -6,7 +6,7 @@ Add to your `deps.edn`:
 
 
 ```clojure
- io.github.lukaszkorecki/tolkien {:git/tab "TAG" :git/sha "SHA"}
+ io.github.lukaszkorecki/tolkien {:git/tag "TAG" :git/sha "SHA"}
  ```
 
  And try it out:
@@ -35,7 +35,7 @@ or later, you're going to run into the token size limit of the context length li
 
 Tolkien helps you to get accurate token counts for strings and the Chat Completion API.
 
-:warning: Chat Completion API payloads are notoriously hard to get accurate counts for - [read this blog post explaning why]().
+:warning: Chat Completion API payloads are notoriously hard to get accurate counts for - [read this blog post explaning why](https://medium.com/@lukaszkorecki/tolkien-clojure-library-for-accurate-token-counting-for-openai-apis-cd03b618232).
 
 Based on my experiments, usage of real life data (short, mid-size and long form text), Tolkien has a ~25 token error margin, meaning it
 will undercount or overcount by 25 tokens max, given the Chat Completion API features used.

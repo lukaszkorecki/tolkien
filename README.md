@@ -6,7 +6,7 @@ Add to your `deps.edn`:
 
 
 ```clojure
- io.github.lukaszkorecki/tolkien {:git/tag "v0.1.3" :git/sha "df765b2"}
+ io.github.lukaszkorecki/tolkien {:git/tag "v0.1.4" :git/sha "65aeb98"}
  ```
 
  And try it out:

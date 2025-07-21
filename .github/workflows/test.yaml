@@ -1,0 +1,28 @@
+name: tolkien
+
+on:
+  push
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    container:
+      image: clojure:openjdk-17-tools-deps-slim-buster
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Cache Clojure deps
+      uses: actions/cache@v4
+      with:
+        path: /root/.m2
+        key: v1-deps-${{ hashFiles('./deps.edn') }}
+
+    - name: Run tests
+      run: clj -M:test

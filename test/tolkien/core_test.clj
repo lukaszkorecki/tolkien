@@ -33,3 +33,8 @@
                                                     :result {:type "integer"}}
                                        :required ["explanation" :result_type :result]}}]
              :function_call {:name :count_items}})))))
+
+(deftest latest-models-test
+  (testing "simple token counter"
+    (is (= 2
+           (tokenizer/count-tokens "gpt-4o" "foo bar")))))
